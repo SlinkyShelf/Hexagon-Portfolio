@@ -1,0 +1,47 @@
+.paper {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  width: 18vw;
+  aspect-ratio: 0.773;
+  background-color: white;
+  transition: all 0.5s;
+}
+.paper:hover {
+  scale: 1.05;
+}
+
+.paper:nth-child(1) {
+  rotate: -28deg;
+  background-color: hsl(75deg, 50%, 50%);
+  z-index: 29;
+}
+
+.paper:nth-child(2) {
+  rotate: -9.5deg;
+  background-color: hsl(59deg, 50%, 50%);
+  z-index: 29;
+}
+
+.paper:nth-child(3) {
+  rotate: 8deg;
+  background-color: hsl(56deg, 50%, 50%);
+  z-index: 59;
+}
+
+.paper:nth-child(4) {
+  rotate: 22.5deg;
+  background-color: hsl(35deg, 50%, 50%);
+  z-index: 100;
+}
+
+.paper:nth-child(5) {
+  rotate: 36deg;
+  background-color: hsl(99deg, 50%, 50%);
+  z-index: 72;
+}
+
+body {
+  margin: 0px;
+  background-color: rgb(197, 158, 119);
+}

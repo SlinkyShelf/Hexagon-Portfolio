@@ -1,8 +1,8 @@
 const sass = require('sass');
 const fs = require("fs")
 
-const readDir = ".src/scss"
-const writeDir = ".src/css"
+const readDir = "./src/scss"
+const writeDir = "./src/css"
 
 function getFileName(file)
 {
@@ -22,8 +22,8 @@ function compileDir(dir)
             try {
                 const result = sass.compile(readDir+"/"+dir+"/"+file)
                 fs.writeFileSync(writeDir+dir+"/"+getFileName(file)+".css", result.css)
-            } catch {
-
+            } catch (e) {
+                console.log(e);
             }
         } else {
             // is Dir
