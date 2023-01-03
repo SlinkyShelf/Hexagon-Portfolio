@@ -30,30 +30,30 @@
 
 .paper:nth-child(1) {
   rotate: -15deg;
-  background-color: hsl(62deg, 50%, 50%);
+  background-color: hsl(46deg, 50%, 50%);
   translate: 5vh;
 }
 
 .paper:nth-child(2) {
   rotate: -8deg;
-  background-color: hsl(88deg, 50%, 50%);
+  background-color: hsl(36deg, 50%, 50%);
   translate: 10vh;
 }
 
 .paper:nth-child(3) {
   rotate: -1deg;
-  background-color: hsl(60deg, 50%, 50%);
+  background-color: hsl(63deg, 50%, 50%);
   translate: 15vh;
 }
 
 .paper:nth-child(4) {
   rotate: 6deg;
-  background-color: hsl(94deg, 50%, 50%);
+  background-color: hsl(41deg, 50%, 50%);
   translate: 20vh;
 }
 
 .paper:nth-child(5) {
   rotate: 13deg;
-  background-color: hsl(54deg, 50%, 50%);
+  background-color: hsl(72deg, 50%, 50%);
   translate: 25vh;
 }

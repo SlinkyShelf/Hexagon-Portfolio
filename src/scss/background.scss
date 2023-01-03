@@ -1,0 +1,15 @@
+.bg-line {
+    position: absolute;
+}
+
+$color-list: #563232 #ffc18c #84240c #da6d42 rgb(197, 158, 119);
+
+@for $i from 1 through 100 {
+    .bg-line:nth-child(#{$i}) {
+        top: random(100) * 1%;
+        left: random(100) + 0%;
+        width: random(100) + 0%;
+        height: 3%;
+        background-color: nth($color-list, random(5));
+    }
+}

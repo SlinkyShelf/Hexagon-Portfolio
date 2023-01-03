@@ -30,25 +30,25 @@
 
 .paper:nth-child(1) {
   rotate: -15deg;
-  background-color: hsl(69deg, 50%, 50%);
+  background-color: hsl(39deg, 50%, 50%);
   translate: 5vh;
 }
 
 .paper:nth-child(2) {
   rotate: -8deg;
-  background-color: hsl(78deg, 50%, 50%);
+  background-color: hsl(41deg, 50%, 50%);
   translate: 10vh;
 }
 
 .paper:nth-child(3) {
   rotate: -1deg;
-  background-color: hsl(100deg, 50%, 50%);
+  background-color: hsl(83deg, 50%, 50%);
   translate: 15vh;
 }
 
 .paper:nth-child(4) {
   rotate: 6deg;
-  background-color: hsl(46deg, 50%, 50%);
+  background-color: hsl(53deg, 50%, 50%);
   translate: 20vh;
 }
 
