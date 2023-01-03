@@ -1,47 +1,65 @@
 .paper {
   position: absolute;
   top: 30%;
-  left: 10%;
+  left: 5%;
   width: 18vw;
   aspect-ratio: 0.773;
   background-color: white;
   transition: all 0.5s;
 }
 .paper:hover {
-  scale: 1.05;
+  transform: scale(1.05);
+}
+.paper.selected {
+  top: 50%;
+  left: 50%;
+  transform-origin: center center;
+  transform: translate(-50%, -50%) scale(1.5) !important;
+  translate: 0% 0% !important;
+  rotate: 0deg !important;
+  z-index: 5;
+}
+
+.paper-tab {
+  position: absolute;
+  height: 7%;
+  width: 70%;
+  top: -6.8%;
+  border-top-right-radius: 1vw;
 }
 
 .paper:nth-child(1) {
-  rotate: -28deg;
-  background-color: hsl(75deg, 50%, 50%);
-  z-index: 29;
+  rotate: -15deg;
+  background-color: hsl(69deg, 50%, 50%);
+  translate: 5vh;
 }
 
 .paper:nth-child(2) {
-  rotate: -9.5deg;
-  background-color: hsl(59deg, 50%, 50%);
-  z-index: 29;
+  rotate: -8deg;
+  background-color: hsl(78deg, 50%, 50%);
+  translate: 10vh;
 }
 
 .paper:nth-child(3) {
-  rotate: 8deg;
-  background-color: hsl(56deg, 50%, 50%);
-  z-index: 59;
+  rotate: -1deg;
+  background-color: hsl(100deg, 50%, 50%);
+  translate: 15vh;
 }
 
 .paper:nth-child(4) {
-  rotate: 22.5deg;
-  background-color: hsl(35deg, 50%, 50%);
-  z-index: 100;
+  rotate: 6deg;
+  background-color: hsl(46deg, 50%, 50%);
+  translate: 20vh;
 }
 
 .paper:nth-child(5) {
-  rotate: 36deg;
-  background-color: hsl(99deg, 50%, 50%);
-  z-index: 72;
+  rotate: 13deg;
+  background-color: hsl(70deg, 50%, 50%);
+  translate: 25vh;
 }
 
 body {
   margin: 0px;
+  overflow: hidden;
   background-color: rgb(197, 158, 119);
 }

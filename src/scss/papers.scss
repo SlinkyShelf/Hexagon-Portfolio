@@ -1,7 +1,7 @@
 .paper {
     position: absolute;
     top: 30%;
-    left: 10%;
+    left: 5%;
 
     width: 18vw;
     aspect-ratio: .773;
@@ -10,19 +10,40 @@
     transition: all 0.5s;
 
     &:hover {
-        scale: 1.05;
+        transform: scale(1.05);
         // z-index: 2;
     }
 
     &.selected {
-        
+        top: 50%;
+        left: 50%;
+        // scale: 1.5;
+
+        transform-origin: center center;
+        transform: translate(-50%, -50%) scale(1.5) !important;
+        translate: 0% 0% !important;
+        rotate: 0deg !important;
+        z-index: 5;
     }
+}
+
+.paper-tab {
+    position: absolute;
+    height: 7%;
+    width: 70%;
+    top: -6.8%;
+
+    border-top-right-radius: 1vw;
+    // border-top-left-radius: 1vw;
+
+    // background-color: inherit;
 }
 
 @for $i from 1 through 5 {
     .paper:nth-child(#{$i}) {
-        rotate: #{-35 + ($i - 1 ) * 17.5 + random(10)} + deg;
+        rotate: #{-15 + ($i - 1 ) * 7 } + deg;
         background-color: hsl(random(70)+30, 50%, 50%);
-        z-index: random(100);
+        translate: #{$i * 5} + vh;
+        // z-index: random(100);
     }
 }
