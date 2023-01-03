@@ -2,14 +2,19 @@
     position: absolute;
 }
 
-$color-list: #563232 #ffc18c #84240c #da6d42 rgb(197, 158, 119);
+$color-list: #5a3535 #ffc18c #84240c #da6d42 rgb(197, 158, 119);
 
-@for $i from 1 through 100 {
+@for $i from 1 through 30 {
+
+    // $size: random(100);
+
     .bg-line:nth-child(#{$i}) {
-        top: random(100) * 1%;
-        left: random(100) + 0%;
-        width: random(100) + 0%;
-        height: 3%;
-        background-color: nth($color-list, random(5));
+        top: #{$i * 3.33%};
+        left: random(100) * 1vw;
+        width: 1vw;
+        transform: scaleX(random(100));
+        height: calc(3.33%);
+        background-color: rgba(56, 38, 29, .3);
+        z-index: -1;
     }
 }

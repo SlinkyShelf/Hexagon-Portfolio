@@ -1,5 +1,5 @@
 const bgContainer = document.getElementById("bg-container")
-const lines = 100
+const lines = 50
 
 for (let i = 0; i < lines; i++)
 {

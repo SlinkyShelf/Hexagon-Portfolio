@@ -1,6 +1,6 @@
 .paper {
   position: absolute;
-  top: 30%;
+  top: 40%;
   left: 5%;
   width: 18vw;
   aspect-ratio: 0.773;
@@ -30,36 +30,38 @@
 
 .paper:nth-child(1) {
   rotate: -15deg;
-  background-color: hsl(39deg, 50%, 50%);
+  background-color: hsl(38deg, 50%, 50%);
   translate: 5vh;
 }
 
 .paper:nth-child(2) {
   rotate: -8deg;
-  background-color: hsl(41deg, 50%, 50%);
+  background-color: hsl(43deg, 50%, 50%);
   translate: 10vh;
 }
 
 .paper:nth-child(3) {
   rotate: -1deg;
-  background-color: hsl(83deg, 50%, 50%);
+  background-color: hsl(31deg, 50%, 50%);
   translate: 15vh;
 }
 
 .paper:nth-child(4) {
   rotate: 6deg;
-  background-color: hsl(53deg, 50%, 50%);
+  background-color: hsl(69deg, 50%, 50%);
   translate: 20vh;
 }
 
 .paper:nth-child(5) {
   rotate: 13deg;
-  background-color: hsl(70deg, 50%, 50%);
+  background-color: hsl(57deg, 50%, 50%);
   translate: 25vh;
 }
 
 body {
   margin: 0px;
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
   background-color: rgb(197, 158, 119);
 }
