@@ -1,0 +1,1 @@
+const svg = document.getElementById("background-svg")
