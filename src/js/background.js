@@ -22,6 +22,11 @@ for (let i = 0; i < lineCount; i++)
         Math.random(),
         Math.random(),
         Math.random(),
+        Math.random(),
+        Math.random(),
+        Math.random(),
+        Math.random(),
+        Math.random(),
     ])
 }
 
@@ -31,7 +36,7 @@ function updateLines()
     const viewWidth = rect.width
     const viewHeight = rect.height
 
-    const time = Date.now()
+    const time = Date.now()/1000
 
     for (let i = 0; i < lineCount; i++)
     {
@@ -41,10 +46,16 @@ function updateLines()
 
         const basetHeight = i/(lineCount-1)* viewHeight
 
-        const startHeight = basetHeight+ Math.sin(time/1000 * (set[2] +.5) + set[0]*10)*60
-        const endHeight = basetHeight+ Math.sin(time/1000 * (set[3] + .5) + set[1]*10)*60
+        const startHeight = basetHeight+ Math.sin(time * (set[2] +.5) + set[0]*10)*60
+        const endHeight = basetHeight+ Math.sin(time * (set[3] + .5) + set[1]*10)*60
 
-        line.setAttribute("d", `M 0 ${startHeight} L ${viewWidth} ${endHeight}`)
+        const x1 = Math.sin(time * (set[4]+.5))*viewWidth
+        const y1 = startHeight + Math.sin(time * (set[5]+.5))*viewHeight
+
+        const x2 = viewWidth + Math.sin(time * (set[6]+.5))*viewWidth
+        const y2 = startHeight + -Math.sin(time * (set[5]+.5))*viewHeight
+
+        line.setAttribute("d", `M -10 ${startHeight} C ${x1} ${y1} ${x2} ${y2} ${viewWidth+10} ${endHeight}`)
     }
 
     requestAnimationFrame(updateLines)
