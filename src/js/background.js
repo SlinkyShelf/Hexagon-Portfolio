@@ -12,6 +12,7 @@ for (let i = 0; i < lineCount; i++)
     const newLine = document.createElementNS(namespace, "path")
     newLine.classList.add("line")
     newLine.setAttribute("d", "M 0 0 L 100 100")
+    newLine.style.fill = `rgb(${i/(lineCount-1)*81}, ${i/(lineCount-1)*14}, ${i/(lineCount-1)*207})`
     svg.appendChild(newLine)
     lines.push(newLine)
     randomSets.push([
@@ -55,7 +56,10 @@ function updateLines()
         const x2 = viewWidth + Math.sin(time * (set[6]+.5))*viewWidth
         const y2 = startHeight + -Math.sin(time * (set[5]+.5))*viewHeight
 
-        line.setAttribute("d", `M -10 ${startHeight} C ${x1} ${y1} ${x2} ${y2} ${viewWidth+10} ${endHeight}`)
+        line.setAttribute("d", `M -10 ${viewHeight} 
+        L -10 ${startHeight} 
+        C ${x1} ${y1} ${x2} ${y2} ${viewWidth+10} ${endHeight}
+        L ${viewWidth+10} ${viewHeight}`)
     }
 
     requestAnimationFrame(updateLines)
