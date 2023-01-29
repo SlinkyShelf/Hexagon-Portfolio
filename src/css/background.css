@@ -10,3 +10,8 @@ body {
   width: 100vw;
   height: 100vh;
 }
+
+.line {
+  stroke: white;
+  stroke-width: 5;
+}
