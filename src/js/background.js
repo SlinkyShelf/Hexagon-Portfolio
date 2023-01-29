@@ -2,6 +2,7 @@ const svg = document.getElementById("background-svg")
 
 const namespace = "http://www.w3.org/2000/svg"
 
+const tColor = [81, 14, 207]
 const lineCount = 5;
 
 const lines = []
@@ -12,7 +13,8 @@ for (let i = 0; i < lineCount; i++)
     const newLine = document.createElementNS(namespace, "path")
     newLine.classList.add("line")
     newLine.setAttribute("d", "M 0 0 L 100 100")
-    newLine.style.fill = `rgb(${i/(lineCount-1)*81}, ${i/(lineCount-1)*14}, ${i/(lineCount-1)*207})`
+    const fillP = i/(lineCount-1)
+    newLine.style.fill = `rgb(${fillP*tColor[0]}, ${fillP*tColor[1]}, ${fillP*tColor[2]})`
     svg.appendChild(newLine)
     lines.push(newLine)
     randomSets.push([
